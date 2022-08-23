@@ -1,9 +1,40 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base{
+  tr{
+    @apply grid grid-cols-3 md:grid-cols-4 bg-white dark:bg-black
+  }
+  td{
+    @apply flex justify-center p-4 items-center dark:text-white last:hidden md:last:flex
+  }
+  th{
+    @apply p-4 capitalize last:hidden md:last:block flex items-center justify-center cursor-pointer
+  }
+  body{
+    @apply bg-gray-200 dark:bg-neutral-800
+  }
+}
 html,
 body {
   padding: 0;
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
     Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+
+  width: 100vw;
+}
+
+#__next{
+  display: grid;
+  place-items: center;
+  width: 100%
+}
+
+.icon-size{
+  font-size: 3rem
+    
 }
 
 a {
